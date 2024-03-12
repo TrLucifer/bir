@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+
+
+
+    <style>
+        body {
+            background-color: #38535f;
+        }
+
+        .navbar {
+            background-color: #1d3a48 !important;
+
+
+        }
+
+        .navbar-brand img {
+            width: 50px;
+        }
+
+        .collapse ul a {
+
+            color: #e3f5ff !important;
+            margin-right: 25px;
+        }
+
+        #navbarSupportedContent {
+            flex-grow: 0;
+        }
+
+        .collapse ul .active {
+            background-color: #2b5063;
+            border-radius: 5px;
+
+        }
+
+        .dropdown .dropdown-toggle {
+            color: #68a5c3 !important;
+        }
+
+        .altnav {
+            margin-top: 76px;
+            background-color: #264858;
+        }
+
+        .navvitem {
+            justify-content: space-between;
+            align-items: center;
+            height: 55px;
+
+        }
+
+        .navbarr {
+            margin-right: 32px;
+        }
+
+        .navvitem ul li a {
+            color: #a7d9f4;
+        }
+
+
+        .aramakutu {
+            width: 450px;
+            background-color: #19313e;
+            border-radius: 15px;
+
+        }
+
+        .aramakutu ::placeholder {
+            color: #67a7c2;
+        }
+
+        .aramakutu button {
+            color: white;
+        }
+
+        .form-control {
+            background-color: #19313e;
+            border-radius: 15px;
+            border: none;
+
+        }
+
+        .arama .bg-body-tertiary {
+            background-color: #19313e !important;
+            border-radius: 15px;
+
+        }
+
+        .uygulamaReklam {
+            background-color: #3d6273;
+            font-size: large;
+            color: white;
+            font-weight: 400;
+            height: 60px;
+            display: flex;
+            border-radius: 2px;
+            justify-content: left;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .uygulamaReklam a {
+            background-color: #284a5b;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .cardYapi {
+            width: 168px;
+            height: 300px;
+        }
+
+
+        .secimGenel {
+            background: rgb(32, 60, 74);
+            border-radius: 2px;
+        }
+
+        .editörünSecimi h6 {
+            font-size: x-large;
+            font-weight: 700;
+            color: #e3f5ff;
+        }
+
+        .fragmanHaberler {
+            background-color: #1a323e;
+            padding: 15px;
+        }
+
+        .fragmanCard {
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .fragmanCard img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 5px solid #056d7b;
+
+        }
+
+        .fragBölüm {
+            justify-content: space-around;
+        }
+
+        .fragTarih {
+            text-align: center;
+            font-size: 10px;
+            font-weight: bolder;
+            background-color: #056d7b;
+            border-radius: 5px;
+            height: 20px;
+            justify-content: center;
+        }
+
+        .fragİsim {
+            text-align: center;
+            font-size: 15px;
+            font-weight: bolder;
+
+        }
+
+        .cardUc {
+            gap: 12px;
+
+        }
+
+        .filmlerKapsayıcı {
+            background-color: #f3f8f9;
+            padding: 10px;
+
+        }
+
+        .cardYapı {
+            max-width: 212px;
+            margin-top: 15px;
+        }
+
+        .yeniFilmBaslık {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 35px 15px 20px;
+            align-items: center;
+        }
+        .gecisCon{
+            margin-top:25px;
+        }
+        
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top mb-6">
+        <div class="container containerNav">
+            <a class="navbar-brand" href="#"><img src="İmage/movie-time-neon-sign-sign_24908-55555.jpg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold fs-7">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: #68a5c3 !important; ;">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="altnav container-fluid">
+        <div class="d-flex navvitem container">
+            <ul class="nav fw-bold fs-7">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+
+            </ul>
+            <div class="arama">
+                <nav class="navbarr bg-body-tertiary">
+                    <div class="arama">
+                        <form class="d-flex aramakutu" role="search">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Film Adı veya IMDB Linki Giriniz" aria-label="Search">
+                            <button class="btn" type="submit">Ara</button>
+                        </form>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+        <div class="uygulamaReklam">
+            <p style="margin: 0px;">Değerli FullHDFilmizlesene Ailesi, Mobil Uygulamamız kullanıma hazırdır. <a
+                    href="#">Burdan İndiriniz</a></p>
+
+        </div>
+
+
+        <div class="secimGenel p-3">
+            <div class="editörünSecimi mb-4">
+                <h6>Editörün Seçimi</h6>
+            </div>
+            <div class="container rrr ">
+                <div class="row">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card cardYapi">
+                                <div class="card-body p-0">
+                                    <img src="İmage/76.jpg" alt="" height="180px">
+                                    <div class="cat-container-main">
+                                        <div class="cat-title-main"><a
+                                                href="https://diziwatch.net/dizi/boku-no-kokoro-no-yabai-yatsu-izle-18/">Boku
+                                                no Kokoro no Yabai Yatsu</a></div>
+                                        <div class="cat-imdbdate-main">
+                                            <div class="cat-imdb"><i class="fas fa-star"></i> 8.2<span
+                                                    class="text-muted"> /10</span></div>
+                                            <div class="cat-date"><i class="far fa-calendar-check"></i> 2023</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="fragmanHaberler">
+            <div class="container my-3 p-6">
+                <div class="row fragBölüm">
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="cardd fragmanCard">
+                            <div class="item">
+                                <img src="İmage/76.jpg" alt="">
+                                <h6 class="fragTarih">11.11.1111</h6>
+                                <h5 class="fragİsim">Film Adıııı</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="container filmlerKapsayıcı">
+            <div class="filmler">
+                <div class="row">
+                    <div class="yeniFilmBaslık">
+                        <h3>Yeni Film İzle</h3>
+                        <h3>Trend Filmler</h3>
+                    </div>
+                    <div class="col-md-9 d-flex cardUc">
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-9 d-flex cardUc">
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9 d-flex cardUc">
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9 d-flex cardUc">
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9 d-flex cardUc">
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9 d-flex cardUc">
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardYapı">
+                            <div class="card text-bg-dark">
+                                <img src="İmage/76.jpg" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="container gecisCon">
+                            <div class="gecis">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item">
+                                            <a class="page-link" href="index2.html">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="index2.html">2</a></li>
+                                        <li class="page-item active"><a class="page-link" href="index3.html">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+        
+                            </div>
+        
+                        </div>
+
+                    </div>
+
+                   
+
+                </div>
+              
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            autoplay: false,
+            autoWidth: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 6
+                }
+            }
+        })
+    </Script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel();
+        });
+    </script>
+</body>
+
+</html>
